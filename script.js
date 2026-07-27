@@ -9,7 +9,7 @@ for (let i = 1; i <= 42; i++) {
     card.className = "product-card";
 
     card.innerHTML = `
-        img/p${num}.jpeg
+        <img src="img/p${num}.jpeg" alt="Producto ${num}">
         <div class="info">
             <span>Disponible</span>
         </div>
@@ -37,7 +37,5 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 cards.forEach((card) => {
-
     observer.observe(card);
-
 });

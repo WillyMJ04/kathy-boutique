@@ -11,10 +11,12 @@
         <h1>🌷 Kathy Boutique</h1>
         <p>Moda para dama · Nuevos ingresos cada semana</p>
     </header>
+
     <nav class="menu">
         <a href="#catalogo">🛍️ Catálogo</a>
         <a href="#contacto">📞 Contacto</a>
     </nav>
+
     <section id="catalogo">
         <h2 class="section-title">
             ✨ Catálogo Disponible
@@ -22,10 +24,36 @@
         <div id="gallery" class="grid">
         </div>
     </section>
+
     <footer id="contacto">
         <h3>🌷 Kathy Boutique</h3>
         <p>WhatsApp: 5599504</p>
     </footer>
+
+    <!-- Botón flotante del carrito -->
+    <button id="cart-toggle" class="cart-toggle">
+        🛒 <span id="cart-count">0</span>
+    </button>
+
+    <!-- Panel del carrito -->
+    <div id="cart-panel" class="cart-panel">
+        <div class="cart-header">
+            <h3>Tu pedido</h3>
+            <button id="cart-close" class="cart-close">✕</button>
+        </div>
+        <div id="cart-items" class="cart-items">
+            <p class="cart-empty">Tu carrito está vacío</p>
+        </div>
+        <button id="cart-send" class="cart-send">Enviar pedido por WhatsApp</button>
+    </div>
+    <div id="cart-overlay" class="cart-overlay"></div>
+
+    <!-- Modal de imagen ampliada -->
+    <div id="lightbox" class="lightbox">
+        <span id="lightbox-close" class="lightbox-close">✕</span>
+        <img id="lightbox-img" src="" alt="Imagen ampliada">
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>

@@ -1,23 +1,25 @@
-const cards = document.querySelectorAll('.product-card');
+const cards =
+document.querySelectorAll('.product-card');
 
-const observer = new IntersectionObserver(entries => {
+const observer =
+new IntersectionObserver(entries=>{
 
-    entries.forEach(entry => {
+entries.forEach(entry=>{
 
-        if(entry.isIntersecting){
+if(entry.isIntersecting){
 
-            entry.target.classList.add('show');
+entry.target.classList.add('show');
 
-        }
+}
 
-    });
-
-},{
-    threshold:0.15
 });
 
-cards.forEach(card => {
+},{
+threshold:0.15
+});
 
-    observer.observe(card);
+cards.forEach(card=>{
+
+observer.observe(card);
 
 });

@@ -18,7 +18,9 @@ for (let i = 1; i <= 42; i++) {
     card.dataset.id = num;
 
     card.innerHTML = `
-        <img src="img/p${num}.jpeg" alt="Producto ${num}" class="product-img">
+        <div class="img-wrap" style="background-image:url('img/p${num}.jpeg')">
+            <img src="img/p${num}.jpeg" alt="Producto ${num}" class="product-img">
+        </div>
         <div class="info">
             <span>Disponible</span>
             <button class="add-btn" data-id="${num}">Agregar al carrito</button>

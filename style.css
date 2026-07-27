@@ -1,1 +1,90 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
 
+body{
+    background:#faf7fb;
+}
+
+header{
+    background:linear-gradient(135deg,#f7c6d9,#d8c1ff);
+    text-align:center;
+    padding:50px 20px;
+}
+
+header h1{
+    color:#5c2472;
+    font-size:3rem;
+}
+
+header p{
+    margin-top:10px;
+    color:#444;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    text-decoration:none;
+    background:#25D366;
+    color:white;
+    padding:12px 25px;
+    border-radius:10px;
+}
+
+.section-title{
+    text-align:center;
+    margin:40px 0 20px 0;
+    color:#5c2472;
+}
+
+.productos{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+    padding:20px;
+}
+
+.card{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 4px 12px rgba(0,0,0,.1);
+}
+
+.card img{
+    width:100%;
+    height:350px;
+    object-fit:cover;
+}
+
+.info{
+    padding:15px;
+}
+
+.precio{
+    color:#e91e63;
+    font-size:22px;
+    font-weight:bold;
+    margin-top:10px;
+}
+
+.wsp{
+    display:block;
+    text-align:center;
+    background:#25D366;
+    color:white;
+    text-decoration:none;
+    padding:10px;
+    margin-top:10px;
+    border-radius:8px;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    color:#666;
+}

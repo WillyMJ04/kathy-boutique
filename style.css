@@ -6,68 +6,115 @@
 }
 
 body{
-    background:#faf7fb;
+    background:linear-gradient(
+        180deg,
+        #fff8fb,
+        #f6f0ff
+    );
 }
 
 header{
-    background:linear-gradient(135deg,#f7c6d9,#d8c1ff);
+    background:linear-gradient(
+        135deg,
+        #f9d6e5,
+        #d9c7ff
+    );
     text-align:center;
-    padding:50px 20px;
+    padding:60px 20px;
 }
 
 header h1{
-    color:#5c2472;
     font-size:3rem;
+    color:#6a1b9a;
 }
 
 header p{
-    margin-top:10px;
-    color:#444;
+    margin-top:15px;
+    color:#555;
 }
 
 .btn{
     display:inline-block;
     margin-top:20px;
-    text-decoration:none;
+    padding:12px 25px;
     background:#25D366;
     color:white;
-    padding:12px 25px;
-    border-radius:10px;
+    text-decoration:none;
+    border-radius:12px;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:scale(1.05);
 }
 
 .section-title{
     text-align:center;
-    margin:40px 0 20px 0;
-    color:#5c2472;
+    margin:50px 0 20px;
+    color:#6a1b9a;
 }
 
 .productos{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-    padding:20px;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+    padding:25px;
 }
 
 .card{
     background:white;
-    border-radius:15px;
+    border-radius:25px;
     overflow:hidden;
-    box-shadow:0 4px 12px rgba(0,0,0,.1);
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.12);
+
+    transition:all .5s ease;
+    position:relative;
+}
+
+.card:hover{
+    transform:
+        translateY(-12px)
+        scale(1.03);
 }
 
 .card img{
     width:100%;
-    height:350px;
+    height:420px;
     object-fit:cover;
+
+    transition:all .8s ease;
+}
+
+.card:hover img{
+    transform:scale(1.12);
+}
+
+.card::after{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background:linear-gradient(
+        transparent,
+        rgba(255,255,255,.05)
+    );
+
+    pointer-events:none;
 }
 
 .info{
-    padding:15px;
+    padding:18px;
+}
+
+.info h3{
+    color:#444;
+    margin-bottom:8px;
 }
 
 .precio{
     color:#e91e63;
-    font-size:22px;
+    font-size:26px;
     font-weight:bold;
     margin-top:10px;
 }
@@ -75,16 +122,26 @@ header p{
 .wsp{
     display:block;
     text-align:center;
+    text-decoration:none;
+
     background:#25D366;
     color:white;
-    text-decoration:none;
-    padding:10px;
-    margin-top:10px;
-    border-radius:8px;
+
+    padding:12px;
+    border-radius:12px;
+
+    margin-top:15px;
+
+    transition:.3s;
+}
+
+.wsp:hover{
+    background:#18a84f;
 }
 
 footer{
+    margin-top:50px;
     text-align:center;
-    padding:30px;
+    padding:40px;
     color:#666;
 }

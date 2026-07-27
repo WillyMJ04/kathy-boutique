@@ -81,11 +81,31 @@ body {
     transform: translateY(0) scale(1);
 }
 
-.product-card img {
-    width: 100%;
+.img-wrap {
+    position: relative;
     height: 230px;
+    overflow: hidden;
+    background: #f6f0ff;
+}
+
+.img-wrap::before {
+    content: "";
+    position: absolute;
+    inset: -20px;
+    background-image: inherit;
+    background-size: cover;
+    background-position: center;
+    filter: blur(25px) saturate(1.3) brightness(.95);
+    transform: scale(1.15);
+    z-index: 0;
+}
+
+.product-card img {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
     object-fit: contain;
-    background: white;
     transition: transform .3s ease;
     cursor: zoom-in;
 }
@@ -140,7 +160,7 @@ footer {
 }
 
 @media (max-width: 480px) {
-    .product-card img {
+    .img-wrap {
         height: 180px;
     }
 }
